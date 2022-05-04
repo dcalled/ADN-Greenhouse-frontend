@@ -1,0 +1,41 @@
+<h1>Registrar Registro</h1>
+<h3>Ejemplo validacion de formularios reactivos con directiva</h3>
+<form [formGroup]="registroForm" (ngSubmit)="crear()" ngNativeValidate>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Nombre:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="nombreRegistro" name="nombre" placeholder="Nombre registro" class="form-control"
+        formControlName="nombre" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Valor Base:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="number" id="valorBaseRegistro" name="valorBase" placeholder="Valor Base registro"
+        class="form-control" formControlName="valorBase" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Tiempo Vegetacion:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="number" id="tiempoVegetacionRegistro" name="tiempoVegetacion" placeholder="Tiempo Vegetacion registro"
+        class="form-control" formControlName="tiempoVegetacion" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Fecha Germinación:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="date" id="fechaGerminacionRegistro" name="fechaGerminacion" placeholder="Fecha Germinación registro"
+        class="form-control" formControlName="fechaGerminacion" required>
+    </div>
+  </div>
+  <input type="submit" value="Crear">
+</form>

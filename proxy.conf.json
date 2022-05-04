@@ -1,0 +1,7 @@
+{
+  "/inventario": {
+    "target": "http://localhost:8081",
+    "logLevel": "debug"
+  }
+
+}

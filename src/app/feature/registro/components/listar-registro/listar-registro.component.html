@@ -1,0 +1,28 @@
+<div id="registros">
+  <table class="registros">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Valor Base</th>
+      <th>Tiempo Vegetación</th>
+      <th>Fecha de Ingreso</th>
+      <th>Fecha estado Plántula</th>
+      <th>Fecha estado Macollamiento</th>
+      <th>Fecha estado Reproducción</th>
+      <th>Estado</th>
+    </tr>
+    <tr *ngFor="let item of listaRegistros | async">
+      <td>{{item.id}}</td>
+      <td>{{item.nombre}}</td>
+      <td>{{item.valorBase}}</td>
+      <td>{{item.tiempoVegetacion}}</td>
+      <td>{{item.fechaIngreso}}</td>
+      <td>{{item.fechaPlantula}}</td>
+      <td>{{item.fechaMacollamiento}}</td>
+      <td>{{item.fechaReproduccion}}</td>
+      <td>{{item.estado}}</td>
+      <td><button [disabled]="item.estado == 'Reproducción' || item.estado == 'Semilla'" (click)="vender(item)">Vender</button></td>
+      <td><button (click)="eliminar(item)">Eliminar</button></td>
+    </tr>
+  </table>
+</div>
